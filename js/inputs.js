@@ -4,7 +4,7 @@ const products = [
     {
         "id":1,
         "name":"چیپس چاکلز",
-        "image":"../img/product1.jpg",
+        "image":"./img/product1.jpg",
         "description":"چیپس سیب زمینی 60 گرمی چاکلز",
         "type":"سوپر مارکت",
         "price":25000,
@@ -12,7 +12,7 @@ const products = [
     {
         "id":2,
         "name":"چیپس مزمز",
-        "image":"../img/product2.jpg",
+        "image":"./img/product2.jpg",
         "description":"چیپس سیب زمینی 60 گرمی مزمز",
         "type":"سوپر مارکت",
         "price":27000,
@@ -20,7 +20,7 @@ const products = [
     {
         "id":3,
         "name":"پفک چیتوز",
-        "image":"../img/product3.jpg",
+        "image":"./img/product3.jpg",
         "description":"پفک 40 گرمی چیتوز موتوری",
         "type":"سوپر مارکت",
         "price":30000,
@@ -28,7 +28,7 @@ const products = [
     {
         "id":4,
         "name":"بیسکوییت ساقه طلایی",
-        "image":"../img/product4.jpg",
+        "image":"./img/product4.jpg",
         "description":"بیسکوییت 200 گرمی ساقه طلایی",
         "type":"سوپر مارکت",
         "price":32000,
@@ -36,7 +36,7 @@ const products = [
     {
         "id":5,
         "name":"تخم مرغ",
-        "image":"../img/product5.jpg",
+        "image":"./img/product5.jpg",
         "description":"تخم مرغ زرین پر 9 عددی",
         "type":"سوپر مارکت",
         "price":56000,
@@ -44,7 +44,7 @@ const products = [
     {
         "id":6,
         "name":"نودل الیت",
-        "image":"../img/product6.jpg",
+        "image":"./img/product6.jpg",
         "description":"نودل الیت سبزیجات 75 گرمی",
         "type":"سوپر مارکت",
         "price":24000,
@@ -52,7 +52,7 @@ const products = [
     {
         "id":7,
         "name":"کت مردانه زاگرس",
-        "image":"../img/product7.jpg",
+        "image":"./img/product7.jpg",
         "description":"",
         "type":"پوشاک",
         "price":25000,
@@ -60,7 +60,7 @@ const products = [
     {
         "id":8,
         "name":"دامن زنانه هیبا",
-        "image":"../img/product8.jpg",
+        "image":"./img/product8.jpg",
         "description":"",
         "type":"پوشاک",
         "price":25000,
