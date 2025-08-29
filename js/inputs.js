@@ -68,7 +68,7 @@ const products = [
     {
         "id":9,
         "name":"کفش پوما",
-        "image":"../img/product9.jpg",
+        "image":"./img/product9.jpg",
         "description":"",
         "type":"پوشاک",
         "price":25000,
@@ -76,7 +76,7 @@ const products = [
     {
         "id":10,
         "name":"مانتو بلوچ",
-        "image":"../img/product10.jpg",
+        "image":"./img/product10.jpg",
         "description":"",
         "type":"پوشاک",
         "price":25000,
@@ -84,7 +84,7 @@ const products = [
     {
         "id":11,
         "name":"شومیز جین وست",
-        "image":"../img/product11.jpg",
+        "image":"./img/product11.jpg",
         "description":"",
         "type":"پوشاک",
         "price":25000,
@@ -92,7 +92,7 @@ const products = [
     {
         "id":12,
         "name":"شلوار جین ماوی",
-        "image":"../img/product12.jpg",
+        "image":"./img/product12.jpg",
         "description":"",
         "type":"پوشاک",
         "price":25000,
@@ -100,7 +100,7 @@ const products = [
     {
         "id":13,
         "name":"گوشی سامسونگ s20",
-        "image":"../img/product13.jpg",
+        "image":"./img/product13.jpg",
         "description":"",
         "type":"الکترونیک",
         "price":25000,
@@ -108,7 +108,7 @@ const products = [
     {
         "id":14,
         "name":"هندزفری بیسیم اپل",
-        "image":"../img/product14.jpg",
+        "image":"./img/product14.jpg",
         "description":"",
         "type":"الکترونیک",
         "price":25000,
@@ -116,7 +116,7 @@ const products = [
     {
         "id":15,
         "name":"شارژر سامسونگ",
-        "image":"../img/product15.jpg",
+        "image":"./img/product15.jpg",
         "description":"",
         "type":"الکترونیک",
         "price":25000,
@@ -124,7 +124,7 @@ const products = [
     {
         "id":16,
         "name":"فلش مموری 16Gb",
-        "image":"../img/product16.jpg",
+        "image":"./img/product16.jpg",
         "description":"",
         "type":"الکترونیک",
         "price":25000,
@@ -132,7 +132,7 @@ const products = [
     {
         "id":17,
         "name":"ساعت هوشمند اپل",
-        "image":"../img/product17.jpg",
+        "image":"./img/product17.jpg",
         "description":"",
         "type":"الکترونیک",
         "price":25000,
@@ -140,7 +140,7 @@ const products = [
     {
         "id":18,
         "name":"هدست JBL",
-        "image":"../img/product18.jpg",
+        "image":"./img/product18.jpg",
         "description":"",
         "type":"الکترونیک",
         "price":25000,
