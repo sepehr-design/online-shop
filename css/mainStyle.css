@@ -131,7 +131,7 @@ a{
     list-style: none;
 }
 .sidebar.open{
-    right: 68px;
+    right: 85px;
 }
 .sidebar-header{
     font-size: 30px;
@@ -180,6 +180,7 @@ a{
     background: rgb(93, 67, 0);
     margin-top: 20px;
     color: #767070;
+    margin-bottom: 40px;
 }
 .footerFoot{
     border: #3e3315 dashed 2px;
