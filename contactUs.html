@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>سپهر شاپ</title>
+    <link rel="stylesheet" href="css/mainStyle.css">
+    <link rel="stylesheet" href="css/contactUs.css">
+    <script src="https://kit.fontawesome.com/2682bc4489.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="loader spinner" id="loader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<div class="navbarTop">
+    <div class="menu">
+        <button id="menu-toggle" class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+    <div class="logo">سپهر شاپ</div>
+</div>
+<div class="bluerBack" id="bluerBack"></div>
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-header">سپهر شاپ</div>
+    <ul class="menuPick">
+        <li id="pick1" class="sel1">منو</li>
+        <li id="pick2">دسته بندی ها</li>
+    </ul>
+    <ul class="menuItemList sel2" id="menuItemList">
+        <li><a href="index.html">خانه</a></li>
+        <li><a href="aboutUs.html">درباره ما</a></li>
+        <li><a href="contactUs.html">تماس با ما</a></li>
+    </ul>
+    <ul class="categoriesList" id="categoriesList">
+        <li id="elect1"><a href="product.html">الکترونیکی</a></li>
+        <li id="super1"><a href="product.html">سوپر مارکت</a></li>
+        <li id="clo1"><a href="product.html">لباس</a></li>
+    </ul>
+</div>
+
+
+<div class="contactUs">
+    <h2>راه های ارتباطی برای تماس با ما :</h2>
+    <div class="contact-form">
+        <p>شماره تلفن: 989912317015</p>
+        <a href="https://github.com/sepehr-design/"><i class="fa-brands fa-github"></i></a>
+        <a href="https://t.me/sepehrhata"><i class="fa-brands fa-telegram"></i></a>
+    </div>
+</div>
+
+
+
+
+
+<div class="dirProduct" id="dirProduct">
+    <div class="dirProductContainer">
+        <button class="dirHeader downBtn" id="dirClose">
+            <i class="fas fa-close"></i>
+            <span class="idShow" id="idShow"></span>
+        </button>
+        <div class="dirContent">
+            <div class="dirImg" id="dirImg"></div>
+            <div class="dirItem">
+                <h1 class="dirItemTitle" id="dirItemTitle"></h1>
+                <a class="dirItemType" id="dirItemType"></a>
+                <div class="dirItemText" id="dirItemText"></div>
+                <div class="dirItemPrice">
+                    <div class="dirItemPriceText" id="dirItemPriceText"></div>
+                    <button class="dirItemBuy" onclick="buy(id)">
+                        <i class="fas fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="favorites" id="favorites">
+    <div class="favoritesContainer" id="favoritesContainer">
+        <button class="favoritesHeader downBtn" id="favClose"><i class="fas fa-close"></i></button>
+    </div>
+</div>
+<div class="buy" id="buy">
+    <button class="buyClose downBtn" id="buyClose"><i class="fas fa-close"></i></button>
+    <div class="buyContainer" id="buyContainer">
+        <h1 class="buyHeader">فاکتور</h1>
+
+
+    </div>
+    <div class="buyPrice">
+        <h2 class="buyPriceText">مجموع :<span class="" id="buyNum">0</span> تومان</h2>
+        <a class="buyBtn downBtn" id="buyBtn" href="index.html">
+            <i class="fas fa-basket-shopping"></i>
+        </a>
+    </div>
+</div>
+<div class="user" id="user">
+    <div class="userContainer">
+        <div class="userHeader">
+            <i class="fas fa-close" onclick="document.getElementById('user').style.display='none'"></i>
+            <h1 class="userHead">User</h1>
+        </div>
+        <div class="userPic">
+            <i class="fa-regular fa-user"></i>
+        </div>
+
+        <div class="userInfo1">
+            <div class="userName">نام کاربری:</div>
+            <h1 class="userName">test user</h1>
+        </div>
+        <div class="userInfo2">
+            <div class="userEmail">ایمیل:</div>
+            <h1 class="userEmail">test@user.test</h1>
+        </div>
+
+    </div>
+</div>
+<div class="footer">
+    <div class="footerFoot">
+        lorem ipsum dolor sit amet consectetur adipisicing elit.
+        lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, numquam.
+    </div>
+    <div class="footerInfo">
+        <div class="footerInfoContainer">
+            این سایت توسط  <a href="https://github.com/sepehr-design">sepehr-design</a> طراحی شده است
+        </div>
+    </div>
+    <div class="footerAbout">
+        <div class="footerAboutContainer">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Aspernatur deleniti est ex fugiat fugit ipsa possimus quas ratione sunt voluptates.
+        </div>
+    </div>
+</div>
+<div class="navbarDown">
+    <ul>
+        <li class="downList"><a href="index.html" class="downBtn">
+            <i class="fa-home fa-regular downIcon"></i>
+            فروشگاه
+        </a></li>
+        <li class="downList2"><button class="downBtn" id="favBtn">
+            <span class="basketNum" id="favAll">0</span>
+            <i class="fa-heart fa-regular downIcon"></i>
+            علاقه مندی
+        </button></li>
+        <li class="downList3"><button class="downBtn" id="basketBtn">
+            <span class="basketNum" id="buyAll">0</span>
+            <i class="fa-basket-shopping fas downIcon"></i>
+            سبد خرید
+        </button></li>
+        <li class="lastDownBtn"><button class="downBtn" onclick="document.getElementById('user').style.display='flex'">
+            <i class="fa-user fa-regular downIcon"></i>
+            حساب کاربری من
+        </button></li>
+    </ul>
+</div>
+<button class="upper downBtn" id="upBtn">
+    <i class="fas fa-chevron-up" id="upper" title="Go Up"></i>
+</button>
+
+
+<script src="js/inputs.js"></script>
+<script>
+    pageCheck = 1;
+</script>
+<script src="js/home.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+
+/*////////////////////////////////////MAIN/////////////////////////////////////////*/
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.mainTop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    height: 300px;
+    margin: 80px auto 50px;
+    border-radius: 15px;
+    background: radial-gradient(ellipse farthest-side, rgba(71, 95, 228, 0.8), rgb(143, 175, 223));
+}
+.mainAd{
+    width: 90%;
+    height: 400px;
+    background-image: url("../img/ad.jpg");
+    background-size: auto;
+    background-position: center;
+    margin: auto auto 10px;
+    border-radius: 15px;
+}
+/*////////////////////////////////////PRODUCT/////////////////////////////////////////*/
+.productContainer{
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.3);
+}
+.productName{
+    text-align: center;
+    margin: 10px 0;
+}
+.products{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+    background: #afafaf;
+    border-top: 1px solid rgba(0,0,0,0.3);
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: normal;
+    width: 42%;
+    height: 250px;
+    background: #fff;
+    border-radius: 10px;
+    margin: 10px;
+    position: relative;
+    flex-shrink: 0;
+    box-shadow: 0 0 9px rgba(0,0,0,0.25);
+}
+.productImage{
+    width: 100%;
+    height: 70%;
+    background: url("../img/product1.jpg") center center no-repeat;
+    position: relative;
+    background-size: cover;
+    top:-8px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.productFunc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 100px;
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    z-index: 3;
+    box-shadow: 0 0 9px rgba(0,0,0,0.25);
+    width: 32px;
+}
+.productFuncBtn{
+    padding: 7px;
+    border-radius: 100px;
+}
+.productFuncBtn i{
+    font-size: 15px;
+}
+.productFuncBtn:first-child{
+    border-bottom: 1px solid #5b5959;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+}
+.productFuncBtn:hover{
+    background: #b2aea9;
+}
+.productInfo{
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: right;
+    margin-right: 10px;
+}
+.productType{
+    color: #3e3315;
+    margin-right: 10px;
+}
+.productPrice{
+    margin-right: 10px;
+}
