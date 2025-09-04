@@ -41,6 +41,8 @@ document.getElementById("basketBtn").addEventListener("click", function() {
 document.getElementById("dirClose").addEventListener("click", function() {
     document.getElementById("dirProduct").style.display="none"
 })
+
+
 document.getElementById("elect1").addEventListener("mouseover", function() {
     localStorage.setItem("count","1")
 })

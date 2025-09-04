@@ -498,6 +498,7 @@ a{
     display: flex;
     flex-direction: column;
     text-align: right;
+    max-width: 40%;
 }
 .favoritesFunc{
     font-size: 2em;
