@@ -71,6 +71,7 @@ a{
     padding: 10px;
     transition: background 0.5s ease-in-out;
     font-size: 20px;
+    cursor: pointer;
 }
 .menuPick li:hover{
     background: #cfcece;
@@ -96,6 +97,7 @@ a{
 }
 .menuItemList li a{
     color: black;
+    padding-left: 50vw;
 }
 .menuItemList li:hover{
     background: #cfcece;
@@ -106,6 +108,7 @@ a{
 }
 .categoriesList li a{
     color: black;
+    padding-left: 47vw;
 }
 .categoriesList li:hover{
     background: #cfcece;
@@ -116,11 +119,11 @@ a{
     margin-left: 50px;
     text-shadow: 2px 2px 3px #000;
 }
+/*/////////////////////////////////////SIDEBAR///////////////////////////////////*/
 .sidebar{
     z-index: 600;
     position: fixed;
     left: 0;
-    right: 100%;
     width: 80%;
     height: 100%;
     background: #fff;
@@ -132,6 +135,9 @@ a{
 }
 .sidebar.open{
     right: 85px;
+}
+.sidebar.close{
+    right: 100%;
 }
 .sidebar-header{
     font-size: 30px;
@@ -145,7 +151,7 @@ a{
     height: 100%;
     z-index: -1;
     background: rgba(0,0,0,0);
-    transition: background 0.5s ease-in-out, z-index 0.5s ease-in-out;
+    transition: background 0.75s ease-in-out, z-index 0.75s ease-in-out;
     top: 0;
 }
 .bluerBack.active{
@@ -216,8 +222,6 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    overflow-y: hidden;
-    overflow-x: auto;
     padding: 5px;
     background: #fff;
     box-shadow: 0 0 9px rgba(0,0,0,0.25);
@@ -373,14 +377,15 @@ a{
 .dirItem{
     margin: 30px 20px;
 }
+.dirItemText{
+    background: #cfcece;
+    border-radius: 10px;
+    max-width: 85%;
+}
 .dirItem>div{
     margin: 20px 0;
-    padding: 5px;
+    padding: 15px;
 }
-.dirItemTitle{
-
-}
-
 .dirItemPrice{
     width: 75vw;
     display: flex;
@@ -460,16 +465,16 @@ a{
     background: rgba(0,0,0,0.7);
 
 }
+
 .favoritesVal{
     max-height: 90%;
-    width: 100vw;
+    width: 98vw;
     height: fit-content;
-    overflow-y: scroll;
     background: #fff;
     border-radius: 15px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: row;
     margin: 10px 0;
     padding-bottom: 20px;
@@ -496,6 +501,7 @@ a{
 }
 .favoritesFunc{
     font-size: 2em;
+    margin-left: 10px;
 }
 .favoritesHeader i{
     font-size: 2em;
@@ -641,3 +647,97 @@ a{
     font-size: 2em;
     color: white;
 }
+/*//////////////////////////////////////MEDIA////////////////////////////////////////*/
+@media only screen and (min-width: 650px){
+    .sidebar{
+        margin: auto;
+        transition: top 0.75s cubic-bezier(0.65, 0.01, 0.33, 1);
+    }
+    .sidebar.open{
+        top: 0;
+        right: 0;
+    }
+    .sidebar.close{
+        top: 5000px;
+        right: 0;
+    }
+    .menuPick li{
+        font-size: 1.9em;
+    }
+    .menuItemList li,.categoriesList li{
+        padding: 25px;
+    }
+    .menuItemList li a,.categoriesList li a{
+        font-size: 1.3em;
+        margin: 0 15px;
+    }
+    .menuItemList li a{
+        padding-left: 58vw;
+    }
+    .categoriesList li a{
+        padding-left: 55.5vw;
+    }
+    .dirHeader{
+        right: unset;
+        font-size: 20px;
+        width: 80vw;
+        top: 75px;
+    }
+    .dirContent{
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .dirImg{
+        margin: 10px 0;
+        width: 30%;
+    }
+    .dirItem{
+        max-width: 50%;
+    }
+    .dirItem div,.dirItem a{
+        font-size: 1.3em;
+        margin: 30px 0;
+    }
+    .dirItemTitle{
+        margin: 30px 0;
+    }
+    .dirItemPrice{
+        width: 40vh;
+    }
+    .favoritesFunc{
+        margin-left: 50px;
+    }
+    .favoritesImg{
+        margin-right: 20px;
+    }
+    .buyClose{
+        right: 95px;
+    }
+    .buyProductInfo span{
+        font-size: 1.2em;
+    }
+    .buyProductPrice{
+        margin-left: 20px;
+    }
+    .userHeader i{
+        right: 95px;
+    }
+    .navbarDown ul{
+        bottom: unset;
+        top: 0;
+        right: 5em;
+        box-shadow: none;
+        z-index: 300;
+        width: 30%;
+    }
+    .navbarDown ul li:hover{
+        background: rgb(207, 206, 206);
+        height: 55px;
+        border-radius: 15px;
+    }
+    .footer{
+        margin-bottom: 0;
+    }
+}
+

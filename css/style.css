@@ -95,7 +95,10 @@
     border-bottom: 1px solid #5b5959;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-
+}
+.productFuncBtn:last-child{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 .productFuncBtn:hover{
     background: #b2aea9;
@@ -105,6 +108,8 @@
     font-weight: bold;
     justify-content: right;
     margin-right: 10px;
+    height: 21px;
+    overflow: hidden;
 }
 .productType{
     color: #3e3315;
@@ -112,4 +117,17 @@
 }
 .productPrice{
     margin-right: 10px;
+}
+
+@media only screen and (min-width: 650px){
+    .product{
+        width: 14.5em;
+        height: 20em;
+    }
+    .product div{
+        margin-top: 5px;
+    }
+    .productImage{
+        top: -14px;
+    }
 }

@@ -2,6 +2,8 @@
     width: 100%;
     border-top: 1px solid rgba(0,0,0,0.3);
     margin-top: 100px;
+    display: flex;
+    flex-direction: column;
 }
 .productName{
     text-align: center;
@@ -83,4 +85,10 @@
 }
 .productPrice{
     margin-right: 10px;
+}
+@media only screen and (min-width: 650px){
+    .product{
+        min-width: 10em;
+        max-width: 13em;
+    }
 }

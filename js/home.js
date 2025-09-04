@@ -5,11 +5,11 @@ let quantityId = JSON.parse(localStorage.getItem('buyQ')) || [];
 /////////////////////////////////////MENU////////////////////////////////////////
 document.getElementById("menu-toggle").addEventListener("click", function() {
     document.getElementById("bluerBack").classList.toggle("active");
-    document.getElementById("sidebar").classList.toggle("open");
+    document.getElementById("sidebar").classList.replace("close","open");
 })
 document.getElementById("bluerBack").addEventListener("click", function() {
     document.getElementById("bluerBack").classList.remove("active");
-    document.getElementById("sidebar").classList.remove("open");
+    document.getElementById("sidebar").classList.replace("open","close");
 })
 document.getElementById("pick1").addEventListener("click", function() {
     document.getElementById("pick1").classList.add("sel1");
@@ -108,6 +108,7 @@ function favorite(id){
         console.log(localStorage.getItem("fav"));
     }
 }
+
 function fJen(ie){
     let i = +ie-1
     let output = `<div class="favoritesVal">
@@ -129,6 +130,7 @@ function fJen(ie){
     }
     document.getElementById("favAll").innerHTML = (+document.getElementById("favoritesContainer").childElementCount)-1;
 }
+
 function fRemove(id){
     for (let j=1;j<document.getElementById("favoritesContainer").childElementCount; j++){
         if (document.getElementById("favoritesContainer").children[j].children[3].id === id){
@@ -140,6 +142,7 @@ function fRemove(id){
     }
     document.getElementById("favAll").innerHTML = (+document.getElementById("favoritesContainer").childElementCount)-1;
 }
+
 for (let i = 0; i < favId.length; i++) {
     fJen(favId[i]);
 }
@@ -167,26 +170,33 @@ function bJen(ie){
             </div>`
     document.getElementById("buyContainer").innerHTML += output;
 }
+
 function bRemove(id) {
     for (let j = 1; j < document.getElementById("buyContainer").childElementCount; j++) {
         if (document.getElementById("buyContainer").children[j].children[2].children[1].id === id) {
             document.getElementById("buyContainer").children[j].remove();
-
             buyId.splice(j-1, 1);
             localStorage.setItem("buy",JSON.stringify(buyId));
             quantityId.splice(j-1,1);
             localStorage.setItem("buyQ",JSON.stringify(quantityId));
             document.getElementById("buyAll").innerHTML = (+document.getElementById("buyContainer").childElementCount)-1;
+            if (pageCheck !==1){
+                document.getElementById("c"+id.slice(1)).disabled = false;
+                document.getElementById("c"+id.slice(1)).style.color = "black";
+            }
         }
     }
 }
-function buy(id){
 
+function buy(id){
     bJen(id.slice(1));
+    document.getElementById(id).disabled = true;
+    document.getElementById(id).style.color = "#00000040";
     buyAll();
     buySave(id,0);
     document.getElementById("buyAll").innerHTML = (+document.getElementById("buyContainer").childElementCount)-1;
 }
+
 function buyAll(){
     let price = 0;
     let priceAll = 0;
@@ -199,6 +209,7 @@ function buyAll(){
     console.log(price);
     console.log(priceAll);
 }
+
 function buyAdd(id){
     let genId = "q"+ id.slice(1);
     let mId = "m"+ id.slice(1);
@@ -207,6 +218,7 @@ function buyAdd(id){
     buyAll()
     buySave(id,1);
 }
+
 function buyMins(id){
     let genId = "q"+ id.slice(1);
     if (+document.getElementById(genId).innerHTML===1){
@@ -218,6 +230,7 @@ function buyMins(id){
         buySave(id,1);
     }
 }
+
 function buySave(id,check){
     let genId = id.slice(1);
 
@@ -238,8 +251,14 @@ function buySave(id,check){
         localStorage.setItem('buyQ', JSON.stringify(quantityId));
     }
 }
+
 for (let i = 0; i < buyId.length; i++) {
     bJen(buyId[i]);
+    if (pageCheck !==1){
+        document.getElementById("c"+buyId[i]).disabled = true;
+        document.getElementById("c"+buyId[i]).style.color = "#00000040";
+
+    }
     document.getElementById("q"+buyId[i]).innerHTML = quantityId[i];
     document.getElementById("buyAll").innerHTML = (+document.getElementById("buyContainer").childElementCount)-1;
     buyAll();
@@ -247,6 +266,7 @@ for (let i = 0; i < buyId.length; i++) {
 ///////////////////////////////////////DIR/////////////////////////////////////
 function productPage(id){
     let genId = id.slice(1)-1;
+
     document.getElementById("dirProduct").style.display="flex";
     document.getElementById("idShow").innerHTML = id+"/main";
     document.getElementById("dirImg").style.backgroundImage = `url('${products[genId].image}')`;
@@ -255,4 +275,11 @@ function productPage(id){
     document.getElementById("dirItemText").innerHTML = products[genId].description;
     document.getElementById("dirItemPriceText").innerHTML = products[genId].price + " تومان";
     document.getElementById("dirItemPriceText").parentElement.children[1].id="w"+(genId+1)
+    if(document.getElementById("c"+id.slice(1)).disabled){
+        document.getElementById("w"+id.slice(1)).disabled = true;
+        document.getElementById("w"+id.slice(1)).style.color = "#00000040";
+    }else {
+        document.getElementById("w"+id.slice(1)).disabled = false;
+        document.getElementById("w"+id.slice(1)).style.color = "#fff";
+    }
 }
