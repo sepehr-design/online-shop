@@ -112,7 +112,7 @@ function fJen(ie){
     let i = +ie-1
     let output = `<div class="favoritesVal">
                 <button class="favoritesImg" style='background-image: url("${products[i].image}");' id="I${products[i].id}" onclick="productPage(id)"></button>
-                <button class="favoritesInfo" id="T${products[i].id}">
+                <button class="favoritesInfo" id="T${products[i].id}" onclick="productPage(id)">
                     <span class="favoritesTitle">${products[i].name}</span>
                     <span class="favoritesType">${products[i].type}</span>
                     <span class="favoritesDes">${products[i].description}</span>
