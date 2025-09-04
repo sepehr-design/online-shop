@@ -122,10 +122,13 @@ function fJen(ie){
             </div>`
     document.getElementById("favoritesContainer").innerHTML += output;
     if(pageCheck===0){
-        let childR = document.getElementById("f"+(products[i].id)).children[0];
-        childR.classList.add("red");
-        childR.classList.add("fas");
-        childR.classList.remove("fa-regular");
+        try {
+            let childR = document.getElementById("f"+(products[i].id)).children[0];
+            childR.classList.add("red");
+            childR.classList.add("fas");
+            childR.classList.remove("fa-regular");
+        } catch(err){}
+
     }
     document.getElementById("favAll").innerHTML = (+document.getElementById("favoritesContainer").childElementCount)-1;
 }

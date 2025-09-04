@@ -78,6 +78,8 @@
     font-weight: bold;
     justify-content: right;
     margin-right: 10px;
+    height: 21px;
+    overflow: hidden;
 }
 .productType{
     color: #3e3315;
