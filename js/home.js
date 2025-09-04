@@ -93,19 +93,16 @@ function favorite(id){
             favId = favId.filter(fav => fav !== id.slice(1));
             localStorage.setItem("fav", JSON.stringify(favId));
             fRemove(id2)
-            console.log(localStorage.getItem("fav"));
         } else {
             favId.push(id.slice(1));
             localStorage.setItem("fav", JSON.stringify(favId))
             fJen(id.slice(1))
-            console.log(localStorage.getItem("fav"));
         }
     }
     else if (pageCheck!==0 && id === id2) {
         favId = favId.filter(fav => fav !== id.slice(1));
         localStorage.setItem("fav", JSON.stringify(favId));
         fRemove(id2)
-        console.log(localStorage.getItem("fav"));
     }
 }
 
@@ -200,14 +197,11 @@ function buy(id){
 function buyAll(){
     let price = 0;
     let priceAll = 0;
-    console.log(document.getElementById("buyContainer").childElementCount);
     for (let j=1;j<document.getElementById("buyContainer").childElementCount;j++){
         price= +document.getElementById("buyContainer").children[j].children[1].children[2].children[0].innerHTML;
         priceAll += price * +document.getElementById("buyContainer").children[j].children[2].children[0].children[1].innerHTML;
     }
     document.getElementById("buyNum").innerHTML = priceAll;
-    console.log(price);
-    console.log(priceAll);
 }
 
 function buyAdd(id){
@@ -239,8 +233,6 @@ function buySave(id,check){
         let selEl = document.getElementById(id).parentElement.parentElement.parentElement;
         let arrEl = Array.from(selEl.parentElement.children);
         let selID = arrEl.indexOf(selEl)-1;
-        console.log(selID);
-        console.log("-----------------------------------");
         quantityId[selID]=store;
         localStorage.setItem('buyQ', JSON.stringify(quantityId));
     }
