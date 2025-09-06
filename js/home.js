@@ -203,11 +203,24 @@ function buy(id){
 function buyAll(){
     let price = 0;
     let priceAll = 0;
+    let finalPrice = "";
+    let flag = false;
     for (let j=1;j<document.getElementById("buyContainer").childElementCount;j++){
         price= +document.getElementById("buyContainer").children[j].children[1].children[2].children[0].innerHTML;
         priceAll += price * +document.getElementById("buyContainer").children[j].children[2].children[0].children[1].innerHTML;
     }
-    document.getElementById("buyNum").innerHTML = priceAll;
+    let stringPrice = priceAll.toString();
+    for (let i = stringPrice.length - 1; i >= 0; i--){
+        if (flag){
+            finalPrice =   stringPrice[i] + "," + finalPrice ;
+            flag = false;
+        }else {
+            finalPrice = stringPrice[i] + finalPrice;
+        }
+        if((stringPrice.length-i)%3===0) flag = true;
+    }
+
+    document.getElementById("buyNum").innerHTML = finalPrice;
 }
 
 function buyAdd(id){
