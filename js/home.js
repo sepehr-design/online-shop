@@ -186,6 +186,7 @@ function bRemove(id) {
                 document.getElementById("c"+id.slice(1)).disabled = false;
                 document.getElementById("c"+id.slice(1)).style.color = "black";
             }
+            buyAll();
         }
     }
 }
