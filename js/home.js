@@ -266,8 +266,11 @@ function buySave(id,check){
 for (let i = 0; i < buyId.length; i++) {
     bJen(buyId[i]);
     if (pageCheck !==1){
-        document.getElementById("c"+buyId[i]).disabled = true;
-        document.getElementById("c"+buyId[i]).style.color = "#00000040";
+        try {
+            document.getElementById("c"+buyId[i]).disabled = true;
+            document.getElementById("c"+buyId[i]).style.color = "#00000040";
+        }catch (e){}
+
 
     }
     document.getElementById("q"+buyId[i]).innerHTML = quantityId[i];
