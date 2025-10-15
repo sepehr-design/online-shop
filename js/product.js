@@ -35,9 +35,9 @@ function pJen(i,type){
     output += type[i].price + " تومان";
     output += "</div>";
     output += "<div class=\"productFunc\">"
-    output += `<button class="downBtn productFuncBtn" onclick="favorite(id)">`
+    output += `<button class="downBtn productFuncBtn" onclick="favorite(id)" aria-label="favoriteBtn">`
     output +=  "<i class=\"fa-regular fa-heart\"></i></button>"
-    output +=  `<button class="downBtn productFuncBtn" onclick="buy(id)">`
+    output +=  `<button class="downBtn productFuncBtn" onclick="buy(id)" aria-label="shoppingCart">`
     output +=  "<i class=\"fas fa-basket-shopping\"></i></button>" +"</div>"
 
     output += "</div>"
